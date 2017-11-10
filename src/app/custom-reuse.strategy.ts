@@ -14,12 +14,12 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
 
   store(route: ActivatedRouteSnapshot, handle: DetachedRouteHandle): void {
     console.debug('CustomReuseStrategy:store', route, handle);
-    this.handlers[route.data.key + route.routeConfig.path] = handle;
+    this.handlers[route.data.key + route.routeConfig.path + route.queryParams['user']] = handle;
   }
 
   shouldAttach(route: ActivatedRouteSnapshot): boolean {
     console.debug('CustomReuseStrategy:shouldAttach', route);
-    return !!route.routeConfig && !!this.handlers[route.data.key + route.routeConfig.path];
+    return !!route.routeConfig && !!this.handlers[route.data.key + route.routeConfig.path + route.queryParams['user']];
   }
 
   retrieve(route: ActivatedRouteSnapshot): DetachedRouteHandle {
@@ -31,7 +31,7 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
       return null;
     }
 
-    return this.handlers[route.data.key + route.routeConfig.path];
+    return this.handlers[route.data.key + route.routeConfig.path + route.queryParams['user']];
   }
 
   shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {

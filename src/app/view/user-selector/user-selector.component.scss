@@ -1,0 +1,13 @@
+:host {
+  position: relative;
+  > span {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: red;
+    border-radius: 2px;
+    color: white;
+    padding: 1px;
+    font-weight: 600;
+  }
+}

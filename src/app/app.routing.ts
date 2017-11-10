@@ -9,11 +9,11 @@ const routes: Routes = [
     data: { key: 'local' }
   },
   {
-    path: 'adquirencia', loadChildren: './spa-fntmod-adquirencia/spa-fntmod-adquirencia.module#SpaFntmodAdquirenciaModule',
+    path: 'adquirencia', loadChildren: './module/spa-fntmod-adquirencia/spa-fntmod-adquirencia.module#SpaFntmodAdquirenciaModule',
     data: { key: 'adquirencia' }
   },
   {
-    path: 'cartoes', loadChildren: './spa-fntmod-cartoes/spa-fntmod-cartoes.module#SpaFntmodCartoesModule',
+    path: 'cartoes', loadChildren: './module/spa-fntmod-cartoes/spa-fntmod-cartoes.module#SpaFntmodCartoesModule',
     data: { key: 'cartoes' }
   },
 ];

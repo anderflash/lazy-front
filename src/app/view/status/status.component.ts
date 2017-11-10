@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { Item } from '../../model';
 
@@ -12,7 +12,8 @@ export class StatusComponent implements OnInit {
   @Input() items: Item[];
 
   private _current: number;
-  constructor(private router: Router) {
+  private _currentItem: Item;
+  constructor(private router: Router, private route: ActivatedRoute) {
     this.items = [];
   }
 
@@ -31,7 +32,11 @@ export class StatusComponent implements OnInit {
   }
 
   public set current(item: Item) {
-    this._current = this.items.findIndex(added => added.title === item.title);
+    this._currentItem = this.items.find(added => added.title === item.title);
+    this._current = this.items.indexOf(this._currentItem);
+  }
+  public get current(): Item {
+    return this._currentItem;
   }
 
   private onClick(item: Item) {

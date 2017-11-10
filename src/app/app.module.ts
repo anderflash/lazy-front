@@ -6,13 +6,15 @@ import { NgModule } from '@angular/core';
 import { CustomReuseStrategy } from './custom-reuse.strategy';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
-import { LocalComponent, StatusComponent } from './view';
+import { UserSelectorComponent, LocalComponent, StatusComponent, UserSearchComponent } from './view';
 
 @NgModule({
   declarations: [
     AppComponent,
     LocalComponent,
-    StatusComponent
+    StatusComponent,
+    UserSelectorComponent,
+    UserSearchComponent,
   ],
   imports: [
     BrowserModule,

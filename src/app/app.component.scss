@@ -8,13 +8,21 @@ main {
 }
 
 header {
-  background: #000066;
+  background: #1f1f48;
   color: white;
   padding: 5px;
+  height: 52px;
+  .users {
+    cursor: pointer;
+    user-select: none;
+    & > a.active {
+      color: pink;
+    }
+  }
 }
 header > section {
   display: inline-block;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.2);
   border-radius: 5px;
   padding: 3px;
   a:active, a:visited, a:link {

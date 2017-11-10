@@ -1,0 +1,14 @@
+input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  header & {
+    border-bottom-color: white;
+    color: white;
+    &:focus {
+      background: white;
+      color: black;
+    }
+  }
+}

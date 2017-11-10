@@ -1,0 +1,10 @@
+@for $i from 1 through 6 {
+	h#{7 - $i} {
+		font-size: $i * 0.4em;
+	}
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Open Sans';
+}
