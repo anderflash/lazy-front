@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1;
+}
+
+header {
+  background: #000066;
+  color: white;
+  padding: 5px;
+}
+header > section {
+  display: inline-block;
+  background: rgba(255,255,255,0.4);
+  border-radius: 5px;
+  padding: 3px;
+  a:active, a:visited, a:link {
+    color: white;
+    text-decoration: none;
+  }
+  a {
+    cursor: pointer;
+  }
+  a.active {
+    color: #00ffff;
+  }
+}
+footer {
+  height: 50px;
+  background: #b6b6b6;
+  app-status {
+    height: 100%;
+  }
+}

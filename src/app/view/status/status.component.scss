@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+}
+div {
+  background: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+  cursor: pointer;
+  user-select: none;
+  &.active {
+    background: #55dd55;  
+  }
+}
